@@ -47,12 +47,12 @@ function initMap() {
 		var map_data = JSON.parse(cont.attr('data-map') || '{}');
 		
 		var coordMapOfficeOne = map_data.center;
-		if(screenJS.device()) {			
+		/*if(screenJS.device()) {			
 			coordMapOfficeOne = map_data.center;
 		};
 		if(screenJS.pc()) {	
 			coordMapOfficeOne = map_data.center;
-		};
+		};*/
 		var zoomMapOfficeOne = map_data.zoom,
 			styleMapOfficeOne = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry","stylers":[{"lightness":"0"},{"saturation":"4"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#c7dae2"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7bc3e4"}]}],
 			optionsMapOfficeOne = {
@@ -79,6 +79,19 @@ function initMap() {
 						position: iconCoordOfficeOne,
 						map: mapOfficeOne,
 						icon: iconOfficeOne,
+						title: map_data.placemarks_title,
+    					//animation: google.maps.Animation.DROP
+					});
+				}
+			}
+			if(map_data.placemarks2.length) {
+				for(var i = 0; i < map_data.placemarks2.length; i++) {
+					var iconCoordOfficeOne2 = {lat: map_data.placemarks2[i].coord[0],  lng: map_data.placemarks2[i].coord[1]}, 
+					OfficeOne = new google.maps.Marker({
+						position: iconCoordOfficeOne2,
+						map: mapOfficeOne,
+						icon: iconOfficeOne,
+						title: map_data.placemarks2_title,
 					});
 				}
 			}

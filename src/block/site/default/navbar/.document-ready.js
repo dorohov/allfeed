@@ -9,11 +9,11 @@ $('.navbar__nav').on('click', '.navbar__nav-dropdown a[data-toggle="tab-dropdown
 
 //if(screenJS.deviceLg()) {
 	//$('.navbar-category__link.dropdown-toggle').removeAttr('data-toggle');
-	$('.navbar__town-link').removeAttr('data-toggle');
-	$('.navbar__town-link').on('click', function(e) {
+	//$('.navbar__town-link').removeAttr('data-toggle');
+	/*$('.navbar__town-link').on('click', function(e) {
 		$(this).toggleClass('is--active');
 		$(".navbar__town-menu").toggleClass('is--active');
-	});
+	});*/
 //} else {
 	//$('.navbar-category__link.dropdown-toggle').attr('data-toggle', 'dropdown');
 	//$('.navbar__town-link').attr('data-toggle', 'dropdown');

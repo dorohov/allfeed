@@ -477,11 +477,11 @@
 
 		}
 		&.is--xl{
-			.calcFontSize(14, 20, 320, 1680);
+			.calcFontSize(12, 20, 320, 1680);
 			.calcLineHeight(18, 26, 320, 1680);
 			@media @media-point-smart {
 				letter-spacing: 2px;
-				padding: 10px 20px;
+				padding: 10px 25px;
 			}
 			@media @media-point-screen {
 				padding: 1.4vw 5.5vw;
@@ -853,6 +853,18 @@
 			@media @media-point-tablet {
 				.makeCols(4, 12);
 			}
+		}
+		&.is--products,
+		&.is--news{
+			@media @media-point-device-lg {
+				.makeCols(6, 12);
+			}
+			@media @media-point-xxs {
+				.makeCols(12, 12);
+			}
+			@media @media-size-sm-l {
+				.makeCols(4, 12);
+			}				
 		}
 		&.is--404{
 			@media @media-point-device {
@@ -2458,9 +2470,9 @@ body.rtl .formError .formErrorArrow {
 	svg{display: block;} 	
 		
 	&:hover{
-		background-color: @yellow;
-		border-color: @yellow;
-		color: @red;
+		background-color: @b-color-a;
+		border-color: @b-color-a;
+		color: @white;
 	}
 }
 .modal-note{
@@ -2510,6 +2522,23 @@ body.rtl .formError .formErrorArrow {
 		//padding-top: 10px;
 		//padding-bottom: 10px; 	
 	} 
+	@media @media-point-device {		
+		body.admin-bar &{
+			top: @wp_bar_device;				
+		}	
+	}
+	@media @media-point-md {		
+		body.admin-bar &{
+			top: @wp_bar_screen;				
+		}	
+	}
+	@media @media-point-screen {
+		&.opacity{					
+			body.admin-bar &{
+				top: @wp_bar_screen;				
+			}			
+		}	
+	}
 	@media @media-screen-lg {
 		color: @navbar-color;
 		position: absolute;
@@ -2520,7 +2549,7 @@ body.rtl .formError .formErrorArrow {
 		&.opacity{
 			opacity: 0;
 			transform: translateY(-100%);
-			transition: @trs-site;			
+			transition: @trs-site;		
 		}
 		&.fixed{
 			position: fixed;
@@ -2611,6 +2640,16 @@ body.rtl .formError .formErrorArrow {
 		    	opacity: 1;
 		    	left: 0;
 		    }
+		    body.admin-bar &{
+				top: ~"calc(@{navbar-device} + @{wp_bar_device})";
+				height: ~"calc(100vh - @{navbar-device} @{wp_bar_device})";				
+			}
+		}
+		@media @media-size-md{
+		    body.admin-bar &{
+				top: ~"calc(@{navbar-device} + @{wp_bar_screen})";
+				height: ~"calc(100vh - @{navbar-device} @{wp_bar_screen})";				
+			}
 		}
 		@media @media-size-xs-p {
 			left: -100%;
@@ -3691,7 +3730,7 @@ body.rtl .formError .formErrorArrow {
 				display: none;
 			}
 		}
-		&.is--cols-3{
+		&.is--cols-4{
 			@media @media-point-device {
 				.makeCols(6, 12);
 			}

@@ -7,7 +7,7 @@ window.matchMedia||(window.matchMedia=function(){"use strict";var a=window.style
 /**
 @license Sticky-kit v1.1.3 | MIT | Leaf Corcoran 2015 | http://leafo.net
  */
-
+/*
 (function() {
   var $, win;
 
@@ -266,4 +266,4 @@ window.matchMedia||(window.matchMedia=function(){"use strict";var a=window.style
     return this;
   };
 
-}).call(this);
+}).call(this);*/
