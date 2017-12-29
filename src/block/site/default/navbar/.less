@@ -27,7 +27,7 @@
 			}			
 		}	
 	}
-	@media @media-screen-lg {
+	@media @media-point-screen-lg {
 		color: @navbar-color;
 		position: absolute;
 		top: 0px;
@@ -57,7 +57,7 @@
 		padding-top: 10px;
 		padding-bottom: 10px; 
 		background: @navbar-bg-device;	
-		@media @media-screen-lg {			
+		@media @media-point-screen-lg {			
 			background-color: @navbar-bg-screen;
 			padding-top: 13px;
 			padding-bottom: 13px;
@@ -103,14 +103,14 @@
 		transition: none;
 		max-width: 40px;
     	height: 40px;
-		@media @media-screen-lg{
+		@media @media-point-screen-lg {
 			max-width: 100px;
 			height: 100px;		
 		}
 	}
 	//collapse
 	&collapse{
-		@media @media-device-lg{
+		@media @media-point-device-lg{
 			position: fixed;
 			top: @navbar-device;
 			left: -270px;
@@ -133,7 +133,7 @@
 				height: ~"calc(100vh - @{navbar-device} @{wp_bar_device})";				
 			}
 		}
-		@media @media-size-md{
+		@media @media-point-md2{
 		    body.admin-bar &{
 				top: ~"calc(@{navbar-device} + @{wp_bar_screen})";
 				height: ~"calc(100vh - @{navbar-device} @{wp_bar_screen})";				
@@ -143,11 +143,11 @@
 			left: -100%;
 			width: 100%;
 		}
-		@media @media-size-md{
+		@media @media-point-md2{
 			top: @navbar-md;
 	    	//background: @navbar-bg-screen;
 		}
-		@media @media-screen-lg{
+		@media @media-point-screen-lg{
 			display: block;
 			position: relative;
 			position: static;
@@ -155,20 +155,20 @@
 		}	
 	}
 	&collapse-inner{
-		@media @media-device-lg{
+		@media @media-point-device-lg{
 			height: 100%;
 			overflow: auto;
 			padding: 20px 25px;
 			position: relative;
 		}
-		@media @media-size-md {
+		@media @media-point-md2 {
 			padding: 20px 20px;
 		}
-		@media @media-screen-lg{position: static;}
+		@media @media-point-screen-lg{position: static;}
 	}
 	&collapse-row{
 		align-items: center;
-		@media @media-device-lg {
+		@media @media-point-device-lg {
 			flex-wrap: wrap;
 			margin-top: -20px;
 		}
@@ -194,8 +194,8 @@
 			@media @media-point-device-lg {order: 3;}	
 		}
 		&.is--soc{
-			@media @media-device-lg {order: 1}
-			@media @media-screen-lg {
+			@media @media-point-device-lg {order: 1}
+			@media @media-point-screen-lg {
 				max-width: 140px;
 				min-width: 90px;
 			}
@@ -203,10 +203,10 @@
 		&.is--nav{
 		}
 		&.is--tel{
-			@media @media-device {
+			@media @media-point-device {
 				//display: none;
 			}
-			@media @media-size-xxl {
+			@media @media-point-xxl {
 				text-align: right;
 				//min-width: 250px;
 			}
@@ -226,7 +226,7 @@
 		margin-right: -(@gutter);
 		font-size: @navbar-fs + 6;
 		line-height: @navbar-lh + 8;
-		@media @media-device-lg{
+		@media @media-point-device-lg{
 			flex-wrap: wrap;
 		}
 		@media @media-point-screen-lg {
@@ -272,11 +272,11 @@
 			opacity: 0;
 			transition: @trs-site;
 		}
-		@media @media-device-lg{
+		@media @media-point-device-lg{
 			color: @navbar-color-device;
 		    display: inline-block;
 		}
-		@media @media-screen-lg{
+		@media @media-point-screen-lg{
 			display: block;
 			position: relative;
 			z-index: 1;
@@ -291,7 +291,7 @@
 		}
 		&:hover{
 			color: @navbar-color-hover;
-			@media @media-screen-lg{
+			@media @media-point-screen-lg{
 				//background-color: @navbar-active-bg;
 			}	
 			&::before{

@@ -2,9 +2,9 @@
 	&block{
 		position: relative;
 		max-height: 835px;
-		@media @media-size-xs {
+		//@media @media-size-xs {
 			//display: none;
-		}	
+		//}	
 		@media @media-point-screen-lg {					
 			//height: ~"calc(100vh - @{navbar-screen})";
 			//height: 100vh;
@@ -19,7 +19,7 @@
 	}
 	&carousel{}
 	&carousel-control{
-		@media @media-screen {
+		@media @media-point-screen {
 			//opacity: 0;
 			.header-block__carousel:hover &{opacity: 1;}
 		}
@@ -85,7 +85,7 @@
 			margin-bottom: 2.8vw;
 		}
 	}
-	&carousel-adv{
+	/*&carousel-adv{
 		&.is--slide1{
 			display: flex;
 			flex-wrap: wrap;
@@ -136,5 +136,5 @@
 				background-color: fadeout(@orange, 50%);
 			}
 		}
-	}
+	}*/
 }

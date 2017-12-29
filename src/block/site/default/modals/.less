@@ -22,15 +22,15 @@
 	z-index: @zindex-modal;
 	-webkit-overflow-scrolling: touch;
 	outline: 0;
-	@media @media-size-xs{
+	@media @media-point-smart {
 		&.fade .modal-dialog {left: -100%;}
 		&.in .modal-dialog {left: 0;}
 	}
-	@media @media-notsmart{
+	@media @media-point-notsmart{
 		&.fade .modal-dialog {top: 0;}
 		&.in .modal-dialog {top: 5%;}
 	}
-	@media @media-size-mdl{
+	@media @media-point-md2{
 		&.fade .modal-dialog {top: 0;}
 		&.in .modal-dialog {top: 0%;}
 	}
@@ -38,7 +38,7 @@
 .modal-open .modal {
 	overflow-x: hidden;
 	overflow-y: auto;
-	@media @media-notsmart{overflow-y: hidden;}
+	@media @media-point-notsmart{overflow-y: hidden;}
 	
 }
 .modal-backdrop {
@@ -57,19 +57,19 @@
 .modal-dialog {
 	transition: all 0.5s;
 	position: relative;
-	@media @media-size-xs 	{width: auto;	margin: 0px;}  
-	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
-	@media @media-screen 	{width: 600px;	margin: 0px auto;} 
+	width: auto;	
+	margin: 0px;
+	@media @media-point-tablet 	{width: 620px;	margin: 10px auto;}  
+	@media @media-point-screen 	{width: 600px;	margin: 0px auto;} 
 	 
 }
 .modal-body {
 	position: relative;
 	background: @white;
 	border-radius: 5px;
-	//color: @black;	
-	@media @media-size-xs{padding: 35px 40px;}	
-	@media @media-size-sm{padding: 70px 60px 50px;}
-	@media @media-screen{padding: 3vw 3.2vw;}
+	padding: 35px 40px;
+	@media @media-point-tablet{padding: 70px 60px 50px;}
+	@media @media-point-screen{padding: 3vw 3.2vw;}
 }
 .modal-content{}
 // Title text within header
