@@ -20,6 +20,12 @@
 				}
 				&::after{opacity: 0;}
 			}
+			@media @media-point-notsmart {				
+				&.is--nobg{
+					&::before,
+					&::after{display: none;}
+				}
+			}
 			@media @media-point-screen {
 				&::after{
 					position: absolute;
@@ -31,10 +37,6 @@
 					background-color: fadeout(@green-dark, 80%);
 					transition: @trs-site;
 					border-radius: 50%;
-				}
-				&.is--nobg{
-					&::before,
-					&::after{display: none;}
 				}
 				.products-panel__cols:nth-child(2) &{
 					&::after{
