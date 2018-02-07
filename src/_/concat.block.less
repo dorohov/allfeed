@@ -950,7 +950,6 @@
 				margin-left: auto;
 			}		
 		}
-		&.is--contacts{}
 		&.is--dorohovdesign{
 			@media @media-point-xs {
 				margin-left: auto;
@@ -2776,7 +2775,9 @@ body.rtl .formError .formErrorArrow {
 		line-height: @navbar-lh - 4;
 		@media @media-point-screen-lg {	
 			margin-bottom: 0;
-	  	}
+			position: relative;
+			padding-left: 60px;
+	  	}	
 	}
 	&tel{
 		&, 
@@ -2793,7 +2794,7 @@ body.rtl .formError .formErrorArrow {
 				position: relative;
 				font-size: @b-fs + 2;
 				line-height: @b-lh + 4;
-				padding-left: 60px;
+				//padding-left: 60px;
 			}
 		}
 		&.is--icon{
@@ -2802,6 +2803,15 @@ body.rtl .formError .formErrorArrow {
 			height: 42px;
 			padding: 5px;
 			color: @b-color-a;
+		}
+	}
+	&tel-elem{
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		@media @media-point-screen-lg {
+			margin-bottom: 0px;
 		}
 	}
 	&tel-icon{
@@ -2825,6 +2835,9 @@ body.rtl .formError .formErrorArrow {
 		.navbar__tel:hover &{
 			background-color: @b-color-a;
 		}
+
+	}
+	&tel-name{
 
 	}
 	/*&nav-dropdown{
@@ -4079,13 +4092,22 @@ body.rtl .formError .formErrorArrow {
 }
 .social-contacts__{
 	&block{}
-	&row{		
+	&row{	
+		align-items: center;	
 		margin-left: -(@soc_gutter) - 15px;
 		margin-right: -(@soc_gutter) - 15px;
 	}
 	&cols{
 		padding-left: @soc_gutter + 15px;
 		padding-right: @soc_gutter + 15px;
+		&.is--tel{			
+			@media @media-point-sm {
+				max-width: 280px;
+			}		
+			@media @media-point-md {
+				max-width: 280px;
+			}
+		}
 	}
 	&item{
 		position: relative;
@@ -4113,6 +4135,11 @@ body.rtl .formError .formErrorArrow {
 			color: @b-color-a;
 		}
 		svg{display: block;}
+	}
+	&item-link{
+		margin-right: 10px;
+		display: inline-block;
+		&:last-child{margin-right: 0;}
 	}
 	&item-name{}
 }

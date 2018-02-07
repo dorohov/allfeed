@@ -85,12 +85,19 @@
 								</div>
 								<div class="cols {{navbar_prefix}}collapse-cols cols  is--right">										
 									<div class="{{navbar_prefix}}tel-block">
-										<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">
-											<span class="{{navbar_prefix}}tel-icon">
-												[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]
-											</span> 
-											<span class="{{navbar_prefix}}tel-name">{{contacts.phone}}</span>
-										</a>
+										<span class="{{navbar_prefix}}tel-icon">
+											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]
+										</span> 
+										<div class="{{navbar_prefix}}tel-elem">
+											<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">
+												<span class="{{navbar_prefix}}tel-name">{{contacts.phone}}</span>
+											</a>
+										</div>
+										<div class="{{navbar_prefix}}tel-elem">
+											<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">
+												<span class="{{navbar_prefix}}tel-name">{{contacts.phone}}</span>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -89,13 +89,22 @@
 }
 .social-contacts__{
 	&block{}
-	&row{		
+	&row{	
+		align-items: center;	
 		margin-left: -(@soc_gutter) - 15px;
 		margin-right: -(@soc_gutter) - 15px;
 	}
 	&cols{
 		padding-left: @soc_gutter + 15px;
 		padding-right: @soc_gutter + 15px;
+		&.is--tel{			
+			@media @media-point-sm {
+				max-width: 280px;
+			}		
+			@media @media-point-md {
+				max-width: 280px;
+			}
+		}
 	}
 	&item{
 		position: relative;
@@ -123,6 +132,11 @@
 			color: @b-color-a;
 		}
 		svg{display: block;}
+	}
+	&item-link{
+		margin-right: 10px;
+		display: inline-block;
+		&:last-child{margin-right: 0;}
 	}
 	&item-name{}
 }

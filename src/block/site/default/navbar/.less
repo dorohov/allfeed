@@ -317,7 +317,9 @@
 		line-height: @navbar-lh - 4;
 		@media @media-point-screen-lg {	
 			margin-bottom: 0;
-	  	}
+			position: relative;
+			padding-left: 60px;
+	  	}	
 	}
 	&tel{
 		&, 
@@ -334,7 +336,7 @@
 				position: relative;
 				font-size: @b-fs + 2;
 				line-height: @b-lh + 4;
-				padding-left: 60px;
+				//padding-left: 60px;
 			}
 		}
 		&.is--icon{
@@ -343,6 +345,15 @@
 			height: 42px;
 			padding: 5px;
 			color: @b-color-a;
+		}
+	}
+	&tel-elem{
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		@media @media-point-screen-lg {
+			margin-bottom: 0px;
 		}
 	}
 	&tel-icon{
@@ -366,6 +377,9 @@
 		.navbar__tel:hover &{
 			background-color: @b-color-a;
 		}
+
+	}
+	&tel-name{
 
 	}
 	/*&nav-dropdown{

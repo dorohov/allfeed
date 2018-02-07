@@ -57,6 +57,19 @@
 					block_icon="contacts-tel"
 				]]			
 			</div>	
+		</div>
+		<div class="{{block_prefix}}cols cols">
+			<div class="{{block_prefix}}item">
+				[[azbntple 
+					tpl="/src/block/site/default/contacts/item-icon-link.html" 
+					block_prefix="kontakty-item__"
+					block_mod="is--icon"
+					block_name="{{contacts.phone}}"
+					block_link="tel:{{contacts.phone_tel}}"
+					block_attr="  "
+					block_icon="contacts-tel"
+				]]			
+			</div>	
 		</div>	
 	</div>	
 	<div class="{{block_prefix}}map" id="map-google" data-map='{"center" : [51.761737, 36.130056],"zoom" : 17,"placemarks_title" : "Офис","placemarks" : [{"coord" : [51.761737, 36.130056]}],"placemarks2_title" : "Склад", "placemarks2" : [{"coord" : [51.763900, 36.212915]}]}' ></div>
